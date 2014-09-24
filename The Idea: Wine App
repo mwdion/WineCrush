@@ -1,0 +1,30 @@
+The Idea: Wine App
+This app would be for all restauarants to be able to implement around the Charleston area to create a better way to track your favorite wines, discover new wines, and allow restaurants to update their menu's with ease.  
+<FOR THE CUSTOMER>
+Restaurants all have their own wine list and they can be pretty overwhelming to just look at and know what wine you would want to enjoy. 
+
+What if their was an easier way to:
+-Search through the wine list with keywords that describe your taste preferences that would present you with a few options of the wine you would enjoy.  (then the server can help you narrow it down from those three choices.)
+-Save your favorite wines from different restauarants (FIG, HUSK, MCCRADYS, O-KU...).
+    * with the ability to add your own tasting notes. (this way when you return to a restaurant you know exactly what wine you enjoyed last time and either order it again or try something new)
+    * if that particular wine is not on the list anymore it would present you with a new wine that is similar in taste.
+-look at the wine list before you get to the restaurant.
+    *You can access the most recent wine list from any restaurant before you get to the restaurant with the app to make sure they have the wine you would like to order or to begin to think about what wine your going to order.
+-Try a new wine you would normally not order
+    *"I'm feeling lucky button" that selects a more unique wine from the list.
+-See what other people think about the wine.
+    *when a customer orders a wine, they can go through an interactive wine tasting feature that goes through the steps of tasting wine and make notes and rate it based on what they thought.
+    *other customers can see these ratings and be able to better narrow down a wine they might enjoy.
+-Know when the wine list is updated at your favorite restaurants.
+  *customers can choose to sign up for updates when the menu has changed at their favorite restaurant. 
+<FOR THE RESTAURANT/MANAGER>
+Updating the wine list can be a hassle.  Making sure the servers are aware of new wines when they are added is also difficult.  
+What if their was an easier way to:
+-Add new wines to the menu
+  *When you add a new wine to the database it automatically gets added to the list through a check box. 
+-Add old wines back to the menu
+  *Search the database for a wine that was previously on the menu and add it to the menu with the check box.
+-Add server specific tasting notes.
+  *in addition to the sommelier's tasting notes, servers can add their own notes as well. 
+-Notify servers of changes to the menu
+  *get an email or text message whenever the menu is updated.  

@@ -1,0 +1,39 @@
+The Estimation: Wine App
+Bootstap Theme (1/2 Day)
+-LOGIN (1 Day)
+  *Devise:
+    -Login as Restaurant Admin
+      -CRUD Wine Menu
+    -Login as Customer/Server
+      -View Wine Menu
+      -Add personal tasting notes and rate
+
+-FEATURES
+  * Restaurant Wine Menu (2 1/2 Days)
+    -Create Crud for Wine Menu
+    -Style Wine Menu View page
+    -Style Wine Menu edit page
+    -Angular.js
+  * Make a Searchable Database based off the Wine list. (1 Day).
+  * Make a Searchable Database based off of preferences by using keywords (1 Day)
+
+  * Mailer for changes to the menu (1 Day)
+  * Personal Tasting Notes (3 Days)
+    -Wine tasting Journal that takes you through the steps of tasting wine.
+Padding= 4 Days for extra styling and finesse 
+I only have 16 days!
+
+Things I did not Consider
+  -Twitter Login
+  -Facebook Login
+  -Instagram API to get Wine Label Photos
+
+
+  MVP Thoughts:
+  Editable Menu for Restaurant and Mailer when updated.
+  Adding Personal Tasting Notes to  the Restaurant Wine menu.
+  Search Wine Search Method
+  Search Wine Based on Taste Preferences
+
+
+

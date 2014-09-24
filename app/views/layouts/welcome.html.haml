@@ -1,0 +1,382 @@
+!!!
+%html
+  %head
+    %title WineCrush
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    #colordiv
+    %header.navbar.navbar-inverse.bs-docs-nav{:role => "banner"}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".bs-navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand.scroll-link{"data-id" => "carousel1", :href => "#"} Startup Page
+        %nav.collapse.navbar-collapse.bs-navbar-collapse.pull-right{:role => "navigation"}
+          %ul.nav.navbar-nav
+            %li
+              %a.scroll-link{"data-id" => "signup", :href => "#"} Sign Up
+            %li
+              %a.scroll-link{"data-id" => "whatwedo", :href => "#"} What we do
+            %li
+              %a.scroll-link{"data-id" => "application", :href => "#"} Application Process
+            %li
+              %a.scroll-link{"data-id" => "pricing", :href => "#"} Pricing
+            %li
+              %a.scroll-link{"data-id" => "location", :href => "#"} Location
+            %li
+              %a.scroll-link{"data-id" => "comments", :href => "#"} Comments
+    / Carousel
+    #carousel1.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carousel1"}
+        %li{"data-slide-to" => "1", "data-target" => "#carousel1"}
+        %li{"data-slide-to" => "2", "data-target" => "#carousel1"}
+        %li{"data-slide-to" => "3", "data-target" => "#carousel1"}
+        %li{"data-slide-to" => "4", "data-target" => "#carousel1"}
+        %li{"data-slide-to" => "5", "data-target" => "#carousel1"}
+        %li{"data-slide-to" => "6", "data-target" => "#carousel1"}
+      .carousel-inner
+        .item.active
+          .container
+            .carousel-caption
+              %h1 Welcome to our site!
+              %p Take a look around and let us know if you have any questions.
+        .item
+          .container
+            .carousel-caption
+              %h1 Sign Up
+              %p Use this section to sign up for our newsletter
+              %p
+                %a.btn.btn-lg.btn-primary.scroll-link{"data-id" => "signup", :href => "#", :role => "button"} Sign Up
+        .item
+          .container
+            .carousel-caption
+              %h1 Mission
+              %p View additional details abour our company
+              %p
+                %a.btn.btn-lg.btn-primary.scroll-link{"data-id" => "whatwedo", :href => "#", :role => "button"} Company
+        .item
+          .container
+            .carousel-caption
+              %h1 Application
+              %p See how the application process works
+              %p
+                %a.btn.btn-lg.btn-primary.scroll-link{"data-id" => "application", :href => "#", :role => "button"} Apply now!
+        .item
+          .container
+            .carousel-caption
+              %h1 Pricing
+              %p See additional information on our pricing model
+              %p
+                %a.btn.btn-lg.btn-primary.scroll-link{"data-id" => "pricing", :href => "#", :role => "button"} Prices
+        .item
+          .container
+            .carousel-caption
+              %h1 Location
+              %p See where our office is located
+              %p
+                %a.btn.btn-lg.btn-primary.scroll-link{"data-id" => "location", :href => "#", :role => "button"} Location
+        .item
+          .container
+            .carousel-caption
+              %h1 Comments
+              %p Leave a comment. We will get back to you shortly!
+              %p
+                %a.btn.btn-lg.btn-primary.scroll-link{"data-id" => "comments", :href => "#", :role => "button"} Comment
+      %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel1"}
+        %span.glyphicon.glyphicon-chevron-left
+      %a.right.carousel-control{"data-slide" => "next", :href => "#carousel1"}
+        %span.glyphicon.glyphicon-chevron-right
+    / /.carousel
+    .container
+      #signup.page-section
+        .row
+          .col-lg-12.text-center.v-center
+            %h1.customheader Sign Up
+            %h3 Enter your email to sign-up for our newsletter
+            %br
+              %br
+                %br
+                  %form.col-lg-12
+                    .input-group{:style => "width: 340px; text-align: center; margin: 0 auto;"}
+                      %input.form-control.input-lg{:placeholder => "Enter your email address", :title => "Confidential signup.", :type => "text"}
+                        %span.input-group-btn
+                          %button.btn.btn-lg.btn-primary{:type => "button"} OK
+        %br
+          %br
+            %br
+              %br
+                %br
+                  %br
+                    %br
+                      %br
+                        %br
+                          .text-center
+                            %h1 Follow us
+                          .row
+                            .col-lg-12.text-center.v-center{:style => "font-size: 39pt;"}
+                              %a{:href => "#"}
+                                %span.avatar
+                                  %i.fa.fa-google-plus
+                              %a{:href => "#"}
+                                %span.avatar
+                                  %i.fa.fa-linkedin
+                              %a{:href => "#"}
+                                %span.avatar
+                                  %i.fa.fa-facebook
+                              %a{:href => "#"}
+                                %span.avatar
+                                  %i.fa.fa-github
+      / /#signup
+      #whatwedo.row
+        %h1.text-center.customheader Company Overview
+        .col-md-4
+          .panel.panel-primary
+            .panel-heading
+              %h4.text-center Mission
+            %div{:style => "margin: 10px;"}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam iaculis, neque ac tincidunt mollis, leo eros scelerisque lorem, vel eleifend elit tellus eu turpis.
+              Vestibulum a iaculis elit. Proin congue, nulla vitae malesuada ullamcorper,
+              purus augue dictum ipsum, et tempus enim libero eget augue.
+              Nullam ac ultrices mi, condimentum interdum ante.
+              Vivamus ut consectetur augue, sit amet fringilla felis.
+              Morbi malesuada diam at risus facilisis vestibulum.
+              Donec ipsum sapien, condimentum vitae congue eget, suscipit ac nulla.
+              Pellentesque vitae vulputate libero.
+              Sed pellentesque, velit eget mollis convallis, risus dui lacinia mi, non euismod metus risus non odio.
+              Quisque cursus lectus id sem vehicula, consectetur faucibus eros congue.
+              Maecenas condimentum consequat feugiat.
+            .panel-footer.text-center
+              %span.fa.fa-crosshairs.bigicon
+        .col-md-4
+          .panel.panel-primary
+            .panel-heading
+              %h4.text-center Team
+            %div{:style => "margin: 10px;"}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam iaculis, neque ac tincidunt mollis, leo eros scelerisque lorem, vel eleifend elit tellus eu turpis.
+              Vestibulum a iaculis elit. Proin congue, nulla vitae malesuada ullamcorper,
+              purus augue dictum ipsum, et tempus enim libero eget augue.
+              Nullam ac ultrices mi, condimentum interdum ante.
+              Vivamus ut consectetur augue, sit amet fringilla felis.
+              Morbi malesuada diam at risus facilisis vestibulum.
+              Donec ipsum sapien, condimentum vitae congue eget, suscipit ac nulla.
+              Pellentesque vitae vulputate libero.
+              Sed pellentesque, velit eget mollis convallis, risus dui lacinia mi, non euismod metus risus non odio.
+              Quisque cursus lectus id sem vehicula, consectetur faucibus eros congue.
+              Maecenas condimentum consequat feugiat.
+            .panel-footer.text-center
+              %span.fa.fa-users.bigicon
+        .col-md-4
+          .panel.panel-primary
+            .panel-heading
+              %h4.text-center Projects
+            %div{:style => "margin: 10px;"}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nam iaculis, neque ac tincidunt mollis, leo eros scelerisque lorem, vel eleifend elit tellus eu turpis.
+              Vestibulum a iaculis elit. Proin congue, nulla vitae malesuada ullamcorper,
+              purus augue dictum ipsum, et tempus enim libero eget augue.
+              Nullam ac ultrices mi, condimentum interdum ante.
+              Vivamus ut consectetur augue, sit amet fringilla felis.
+              Morbi malesuada diam at risus facilisis vestibulum.
+              Donec ipsum sapien, condimentum vitae congue eget, suscipit ac nulla.
+              Pellentesque vitae vulputate libero.
+              Sed pellentesque, velit eget mollis convallis, risus dui lacinia mi, non euismod metus risus non odio.
+              Quisque cursus lectus id sem vehicula, consectetur faucibus eros congue.
+              Maecenas condimentum consequat feugiat.
+            .panel-footer.text-center
+              %span.fa.fa-tablet.bigicon
+      / /#whatwedo
+      #application.page-section
+        %h1.customheader.text-center Application Process
+        %div{:style => "margin-top: 100px; margin-bottom: 100px;"}
+          .row
+            #progress1.progress
+              .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "width: 20%;"}
+              %span.progress-type Overall Progress
+              %span.progress-completed 20%
+          .row
+            .row.step
+              #div1.col-md-2{:onclick => "javascript: resetActive(event, 0, 'step-1');"}
+                %span.fa.fa-cloud-download
+                %div Download
+              .col-md-2.activestep{:onclick => "javascript: resetActive(event, 20, 'step-2');"}
+                %span.fa.fa-pencil
+                %div Fill out
+              .col-md-2{:onclick => "javascript: resetActive(event, 40, 'step-3');"}
+                %span.fa.fa-refresh
+                %div Check
+              .col-md-2{:onclick => "javascript: resetActive(event, 60, 'step-4');"}
+                %span.fa.fa-dollar
+                %div Pay Fee
+              .col-md-2{:onclick => "javascript: resetActive(event, 80, 'step-5');"}
+                %span.fa.fa-cloud-upload
+                %div Submit
+              #last.col-md-2{:onclick => "javascript: resetActive(event, 100, 'step-6');"}
+                %span.fa.fa-star
+                %div Feedback
+          #step-1.row.setup-content.step.hiddenStepInfo
+            .col-xs-12
+              .col-md-12.well.text-center
+                %h1 STEP 1
+                %h3.underline Instructions
+                Download the application form from our repository.
+                This may require logging in.
+          #step-2.row.setup-content.step.activeStepInfo
+            .col-xs-12
+              .col-md-12.well.text-center
+                %h1 STEP 2
+                %h3.underline Instructions
+                Fill out the application.
+                Make sure to leave no empty fields.
+          #step-3.row.setup-content.step.hiddenStepInfo
+            .col-xs-12
+              .col-md-12.well.text-center
+                %h1 STEP 3
+                %h3.underline Instructions
+                Check to ensure that all data entered is valid.
+          #step-4.row.setup-content.step.hiddenStepInfo
+            .col-xs-12
+              .col-md-12.well.text-center
+                %h1 STEP 4
+                %h3.underline Instructions
+                Pay the application fee.
+                This can be done either by entering your card details, or by using Paypal.
+          #step-5.row.setup-content.step.hiddenStepInfo
+            .col-xs-12
+              .col-md-12.well.text-center
+                %h1 STEP 5
+                %h3.underline Instructions
+                Upload the application.
+                This may require a confirmation email.
+          #step-6.row.setup-content.step.hiddenStepInfo
+            .col-xs-12
+              .col-md-12.well.text-center
+                %h1 STEP 6
+                %h3.underline Instructions
+                Send us feedback on the overall process.
+                This step is not obligatory.
+        / /.container
+      / /#application
+      #pricing.page-section
+        %h1.customheader.text-center Pricing Options
+        .row
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                %h4.text-center Personal Package
+              .panel-body.text-center
+                %p.lead.pull-right
+                  %strong $10 / month
+              %ul.list-group.list-group-flush.text-center
+                %li.list-group-item
+                  Personal Use
+                  %span.glyphicon.glyphicon-ok.pull-right
+                %li.list-group-item
+                  Single Commercial License
+                  %span.glyphicon.glyphicon-remove.pull-right
+                %li.list-group-item
+                  Multiple site Commercial license
+                  %span.glyphicon.glyphicon-remove.pull-right
+                %li.list-group-item
+                  Technical Support
+                  %span.glyphicon.glyphicon-remove.pull-right
+              .panel-footer
+                %a.btn.btn-lg.btn-block.btn-default Purchase
+          .col-md-4
+            .panel.panel-info
+              .panel-heading
+                %h4.text-center Standard commercial package
+              .panel-body.text-center
+                %p.lead.pull-right
+                  %strong $27 / month
+              %ul.list-group.list-group-flush.text-center
+                %li.list-group-item
+                  Personal Use
+                  %span.glyphicon.glyphicon-ok.pull-right
+                %li.list-group-item
+                  Single Commercial License
+                  %span.glyphicon.glyphicon-ok.pull-right
+                %li.list-group-item
+                  Multiple site Commercial license
+                  %span.glyphicon.glyphicon-remove.pull-right
+                %li.list-group-item
+                  Technical Support
+                  %span.glyphicon.glyphicon-ok.pull-right
+              .panel-footer
+                %a.btn.btn-lg.btn-block.btn-info Purchase
+          .col-md-4
+            .panel.panel-primary
+              .panel-heading
+                %h4.text-center Premium commercial package
+              .panel-body.text-center
+                %p.lead.pull-right
+                  %strong $59 / month
+              %ul.list-group.list-group-flush.text-center
+                %li.list-group-item
+                  Personal Use
+                  %span.glyphicon.glyphicon-ok.pull-right
+                %li.list-group-item
+                  Single Commercial License
+                  %span.glyphicon.glyphicon-ok.pull-right
+                %li.list-group-item
+                  Multiple site Commercial license
+                  %span.glyphicon.glyphicon-ok.pull-right
+                %li.list-group-item
+                  Technical Support
+                  %span.glyphicon.glyphicon-ok.pull-right
+              .panel-footer
+                %a.btn.btn-lg.btn-block.btn-primary Purchase
+      #location
+        %h1.customheader.text-center Office Location
+        .text-center
+          %div 1111 Army Navy Drive
+          %div Arlington
+          %div VA 22203
+          %div USA
+        .page-section
+          .row
+            #map-container
+      #comments.container
+        %h1.customheader.text-center Submit Comments
+        .row
+          %form{:role => "form"}
+            %div
+              .well.well-sm
+                %strong
+                  %span.glyphicon.glyphicon-asterisk>
+                  Required Field
+              .form-group
+                %label{:for => "InputName"} Enter Name
+                .input-group
+                  %input#InputName.form-control{:name => "InputName", :placeholder => "Enter Name", :required => "", :type => "text"}
+                    %span.input-group-addon
+                      %span.glyphicon.glyphicon-asterisk
+              .form-group
+                %label{:for => "InputEmail"} Enter Email
+                .input-group
+                  %input#InputEmailFirst.form-control{:name => "InputEmail", :placeholder => "Enter Email", :required => "", :type => "email"}
+                    %span.input-group-addon
+                      %span.glyphicon.glyphicon-asterisk
+              .form-group
+                %label{:for => "InputEmail"} Confirm Email
+                .input-group
+                  %input#InputEmailSecond.form-control{:name => "InputEmail", :placeholder => "Confirm Email", :required => "", :type => "email"}
+                    %span.input-group-addon
+                      %span.glyphicon.glyphicon-asterisk
+              .form-group
+                %label{:for => "InputMessage"} Enter Message
+                .input-group
+                  %textarea#InputMessage.form-control{:name => "InputMessage", :required => "", :rows => "5"}
+                  %span.input-group-addon
+                    %span.glyphicon.glyphicon-asterisk
+              %input#submit.btn.btn-info.pull-right{:name => "submit", :type => "submit", :value => "Submit"}
+    %br/
+    %br/
