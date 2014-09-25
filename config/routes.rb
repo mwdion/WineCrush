@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user_dashboard/index'
+
+  get 'restaurant_dashboard/index'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
