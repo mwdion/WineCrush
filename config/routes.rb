@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'user_dashboard/index'
+  devise_for :users
+  get 'user_dashboard/index' => 'user_dashboard#index'
 
-  get 'restaurant_dashboard/index'
+  get 'restaurant_dashboard/index' => 'restaurant_dashboard#index'
 
   get 'welcome/index'
 
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   resources :tastes 
-
+  resources :restaurant 
   resources :menus do
     resources :wine do
     end
