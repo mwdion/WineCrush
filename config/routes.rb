@@ -11,8 +11,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  resources :tastes 
-  resources :restaurant 
+  resources :tastes  
   resources :menus do
     resources :wine do
     end
