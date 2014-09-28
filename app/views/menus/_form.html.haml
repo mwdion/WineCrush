@@ -1,0 +1,4 @@
+= form_for @menu do |f|
+  = f.text_field :name, class: 'form-control focusedInput', placeholder: "Add wine list name here..."
+  = f.text_area :description, class: 'form-control focusedInput', placeholder: 'Add menu description here...', rows: '10'
+  =f.submit "Add Menu", class: 'btn btn-success btn-block'

@@ -8,5 +8,99 @@
   %body
     %p.notice= notice
     %p.alert= alert
-    = yield
-  
+    %body
+  .wrapper
+    .box
+      .row.row-offcanvas.row-offcanvas-left
+        / sidebar
+        #sidebar.column.col-sm-2.col-xs-1.sidebar-offcanvas
+          %ul.nav
+            %li
+              %a.visible-xs.text-center{"data-toggle" => "offcanvas", :href => "#"}
+                %i.glyphicon.glyphicon-chevron-right
+          %ul#lg-menu.nav.hidden-xs
+            %li.active
+              %a{:href => "#featured"}
+                %i.glyphicon.glyphicon-cutlery
+                Restaurants
+            %li
+              %a{:href => "#stories"}
+                %i.glyphicon.glyphicon-glass
+                MyWines
+            %li
+              %a{:href => "#"}
+                %i.glyphicon.glyphicon-heart-empty
+                Tastes
+            %li
+              %a{:href => "#"}
+                %i.glyphicon.glyphicon-refresh
+                Refresh
+          %ul#sidebar-footer.list-unstyled.hidden-xs
+            %li
+              %a{:href => "http://www.bootply.com"}
+                %h3                 
+          / tiny only nav
+          %ul#xs-menu.nav.visible-xs
+            %li
+              %a.text-center{:href => "#featured"}
+                %i.glyphicon.glyphicon-list-alt
+            %li
+              %a.text-center{:href => "#stories"}
+                %i.glyphicon.glyphicon-list
+            %li
+              %a.text-center{:href => "#"}
+                %i.glyphicon.glyphicon-paperclip
+            %li
+              %a.text-center{:href => "#"}
+                %i.glyphicon.glyphicon-refresh
+        / /sidebar
+        / main right col
+        #main.column.col-sm-10.col-xs-11
+          / top nav
+          .navbar.navbar-blue.navbar-static-top
+            .navbar-header
+              %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %a.navbar-brand.logo{:href => "/"} b
+            %nav.collapse.navbar-collapse{:role => "navigation"}
+              %form.navbar-form.navbar-left
+                .input-group.input-group-sm{:style => "max-width:360px;"}
+                  %input#srch-term.form-control{:name => "srch-term", :placeholder => "Search", :type => "text"}
+                    .input-group-btn
+                      %button.btn.btn-default{:type => "submit"}
+                        %i.glyphicon.glyphicon-search
+              %ul.nav.navbar-nav
+                %li
+                  %a{:href => "#"}
+                    %i.glyphicon.glyphicon-home
+                    Home
+                %li
+                  %a{"data-toggle" => "modal", :href => "#postModal", :role => "button"}
+                    %i.glyphicon.glyphicon-plus
+                    Add Wine
+                %li
+                  %a{:href => "#"}
+                    %span.badge badge
+              %ul.nav.navbar-nav.navbar-right
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    %i.glyphicon.glyphicon-user
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => ""} More
+                    %li
+                      %a{:href => ""} More
+                    %li
+                      %a{:href => ""} More
+                    %li
+                      %a{:href => ""} More
+                    %li
+                      %a{:href => ""} More
+          / /top nav
+          .padding
+            .full.col-sm-9
+              / content
+              = yield

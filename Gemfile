@@ -33,6 +33,8 @@ gem 'html2haml'
 gem 'cancan'
 gem "paperclip", "~> 4.2"
 gem "font-awesome-rails"
+gem 'bootstrap-glyphicons'
+
 
 
 # Use ActiveModel has_secure_password
