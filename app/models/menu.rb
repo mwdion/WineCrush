@@ -1,3 +1,4 @@
 class Menu < ActiveRecord::Base
-  has_many :wines
+  belongs_to :users
+  has_many :wines, as: :menuable
 end

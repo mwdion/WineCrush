@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :tastes  
   resources :menus do
-    resources :wine do
+    resources :wines do
     end
   end
 

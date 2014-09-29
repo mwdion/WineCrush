@@ -1,2 +1,7 @@
-%h1 UserDashboard#index
-%p Find me in app/views/user_dashboard/index.html.haml
+%h1 User Dashboard
+- @menus.each do |menu|
+  = link_to "#{menu.name}", menu_path(menu)
+  = link_to "Edit", edit_menu_path(menu), class: 'btn btn-xs btn-warning'
+  = link_to "Delete", menu_path(menu), method: :delete, class: 'btn btn-xs btn-danger'
+  %br 
+= link_to "New Favorites List", new_menu_path, class: 'btn btn-info btn-block'
