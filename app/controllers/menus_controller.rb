@@ -1,18 +1,18 @@
 class MenusController < ApplicationController
   before_action :find_menu, only: [:show, :edit, :update, :destroy]  
   def index
-    @menus = Menu.all
+    @menus = current_user.menus
   end
 
   def show
   end
 
   def new
-    @menu = Menu.new
+    @menu = current_user.menus.new
   end
 
   def create
-    @menu = Menu.create menu_params
+    @menu = current_user.menus.create menu_params
     if @menu.save == true
     redirect_to restaurant_dashboard_index_path
     else
@@ -39,6 +39,6 @@ class MenusController < ApplicationController
   end
 
   def menu_params
-    params.require(:menu).permit(:name, :description)
+    params.require(:menu).permit(:name, :description, :user_id)
   end
 end

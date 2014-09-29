@@ -1,5 +1,5 @@
 class UserDashboardController < ApplicationController
   def index
-     @menus = Menu.all
+    @menus = current_user.menus
   end
 end
