@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'restaurant_dashboard/index' => 'restaurant_dashboard#index'
 
   get 'welcome/index'
+  get 'restaurant/index' => 'restaurant#index'
+  get 'restaurant/wines' => 'restaurant#wines'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,10 +14,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   resources :tastes  
-  resources :menus do
-    resources :wines do
-    end
-  end
+  resources :menus 
+  resources :wines 
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
