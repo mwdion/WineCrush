@@ -1,4 +1,4 @@
-= form_for [@menu, @wine] do |f|
+= form_for [@menu, @wine, @taste] do |f|
   = f.text_field :vintage, class: 'form-control focusedInput', placeholder: 'Add wine vintage here...'
   = f.text_field :country, class: 'form-control focusedInput', placeholder: 'Add wine country/state here...'
   = f.text_field :region, class: 'form-control focusedInput', placeholder: 'Add wine region here...'
@@ -7,4 +7,12 @@
   = f.text_field :style, class: 'form-control focusedInput', placeholder: 'Add style of wine here...'
   = f.text_field :btg, class: 'form-control focusedInput', placeholder: 'Add by the glass price here...'
   = f.text_field :btb, class: 'form-control focusedInput', placeholder: 'Add by the bottle price here...'
+  - @tastes.each do |taste|
+    %li
+      = check_box_tag 'taste[taste_ids][]', taste.id, @wine.tastes.include?(taste) 
+      = taste.flavor
+      |
+      = taste.style
   = f.submit "Add Wine", class: 'btn btn-success btn-block'
+
+

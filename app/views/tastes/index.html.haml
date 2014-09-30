@@ -1,0 +1,9 @@
+%h1
+Tastes
+%br
+- @tastes.each do |taste|
+  = link_to "#{taste.flavor}", taste_path(taste)
+  = link_to "Edit", edit_taste_path(taste), class: 'btn btn-xs btn-warning'
+  = link_to "Delete", taste_path(taste), method: :delete, class: 'btn btn-xs btn-danger'
+  %br 
+= link_to "New Taste", new_taste_path, class: 'btn btn-info btn-block'

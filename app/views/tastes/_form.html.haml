@@ -1,0 +1,5 @@
+= form_for @taste do |f|
+  = f.text_field :flavor, class: 'form-control focusedInput', placeholder: 'Add wine descriptor/flavor here...'
+  = f.text_field :style, class: 'form-control focusedInput', placeholder: 'Add style of wine here'
+  = f.submit "Add Taste", class: 'btn btn-success btn-block'
+

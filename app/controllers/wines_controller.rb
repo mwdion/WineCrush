@@ -5,6 +5,7 @@ class WinesController < ApplicationController
   def index
     @wines = Wine.all
     @menus = Menu.all
+    @tastes = Taste.all
   end
 
   def show
