@@ -7,6 +7,9 @@
   = f.text_field :style, class: 'form-control focusedInput', placeholder: 'Add style of wine here...'
   = f.text_field :btg, class: 'form-control focusedInput', placeholder: 'Add by the glass price here...'
   = f.text_field :btb, class: 'form-control focusedInput', placeholder: 'Add by the bottle price here...'
+  = f.hidden_field :menuable_type, value: params[:menuable_type]
+  = f.hidden_field :menuable_id, value: params[:menuable_id]
+
   / - @tastes.each do |taste|
   /   %li
   /     = check_box_tag 'taste[taste_ids][]', taste.id, @wine.tastes.include?(taste) 

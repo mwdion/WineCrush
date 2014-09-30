@@ -1,5 +1,4 @@
 class WinesController < ApplicationController
-  before_action :find_menu
   before_action :find_wine, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -15,11 +14,14 @@ class WinesController < ApplicationController
     @wine = Wine.new
   end
 
+  
   def create
-    @wine = @menu.wines.create wine_params
-    if @wine.save == true 
-    redirect_to menu_path(@menu)
-    else 
+    @wine = Wine.create wine_params
+    if @wine.save == true && current_user.user_type == "Sommelier/Restauranteur"
+      redirect_to restaurant_dashboard_index_path
+    elsif @wine.save == true && current_user.user_type == "Wino"
+    redirect_to user_dashboard_index_path
+    else
     render :new
     end
   end
@@ -29,17 +31,25 @@ class WinesController < ApplicationController
 
   def update
     @wine.update_attributes wine_params
-    redirect_to menu_path(@menu)
+    if current_user.user_type == "Sommelier/Restauranteur"
+      redirect_to restaurant_dashboard_index_path
+    elsif current_user.user_type == "Wino"
+      redirect_to user_dashboard_index_path
+    end
   end
 
   def destroy
     @wine.delete
-    redirect_to menu_path(@menu)
-  end
+    if current_user.user_type == "Sommelier/Restauranteur"
+      redirect_to restaurant_dashboard_index_path
+    elsif current_user.user_type == "Wino"
+      redirect_to user_dashboard_index_path
+    end
+  end  
 
   private
   def wine_params
-    params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb)
+    params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id)
   end
 
   def find_menu

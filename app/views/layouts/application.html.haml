@@ -74,11 +74,11 @@
                         %i.glyphicon.glyphicon-search
               %ul.nav.navbar-nav
                 %li
-                  %a{:href => "#"}
+                  %a{:href => home_path}
                     %i.glyphicon.glyphicon-home
                     Home
                 %li
-                  %a{"data-toggle" => "modal", :href => "#postModal", :role => "button"}
+                  %a{:href => new_wine_path(@users, menuable_type: "User", menuable_id: current_user.id), :role => "button"}
                     %i.glyphicon.glyphicon-plus
                     Add Wine
                 %li

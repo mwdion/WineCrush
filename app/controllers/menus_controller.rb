@@ -13,8 +13,10 @@ class MenusController < ApplicationController
 
   def create
     @menu = current_user.menus.create menu_params
-    if @menu.save == true
-    redirect_to restaurant_dashboard_index_path
+    if @menu.save == true && current_user.user_type == "Sommelier/Restauranteur"
+      redirect_to restaurant_dashboard_index_path
+    elsif @menu.save == true && current_user.user_type == "Wino"
+    redirect_to user_dashboard_index_path
     else
     render :new
     end
@@ -25,12 +27,20 @@ class MenusController < ApplicationController
 
   def update
     @menu.update_attributes menu_params
-    redirect_to restaurant_dashboard_index_path
+    if current_user.user_type == "Sommelier/Restauranteur"
+      redirect_to restaurant_dashboard_index_path
+    elsif current_user.user_type == "Wino"
+      redirect_to user_dashboard_index_path
+    end
   end
 
   def destroy
     @menu.delete
-    redirect_to restaurant_dashboard_index_path
+    if current_user.user_type == "Sommelier/Restauranteur"
+      redirect_to restaurant_dashboard_index_path
+    elsif current_user.user_type == "Wino"
+      redirect_to user_dashboard_index_path
+    end
   end
 
   private
