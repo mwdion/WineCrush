@@ -2,7 +2,7 @@ class WinesController < ApplicationController
   before_action :find_wine, only: [:show, :edit, :update, :destroy]
 
   def index
-    @wines = Wine.all
+    @wines = current_user.wines.all
     @menus = Menu.all
     @tastes = Taste.all
   end

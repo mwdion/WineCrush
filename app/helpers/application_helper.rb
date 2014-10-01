@@ -9,8 +9,7 @@ module ApplicationHelper
     end
   end
   def home_path
-    if user_signed_in?
-      current_user.user_type == "Sommelier/Restauranteur"
+    if current_user.user_type == "Sommelier/Restauranteur"
       restaurant_dashboard_index_path
     else
       user_dashboard_index_path

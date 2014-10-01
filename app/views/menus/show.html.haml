@@ -5,5 +5,5 @@
   = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}"
   = link_to "Edit", edit_wine_path(wine), class: 'btn btn-xs btn-warning'
   = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
-%br
+  %br
 = link_to "Add New Wine", new_wine_path(@menu, menuable_type: "Menu", menuable_id: @menu.id), class: 'btn btn-info btn-block'

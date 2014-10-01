@@ -20,15 +20,15 @@
                 %i.glyphicon.glyphicon-chevron-right
           %ul#lg-menu.nav.hidden-xs
             %li.active
-              %a{:href => "#featured"}
+              %a{:href => restaurant_index_path}
                 %i.glyphicon.glyphicon-cutlery
                 Restaurants
             %li
-              %a{:href => "#stories"}
+              %a{:href => wines_path}
                 %i.glyphicon.glyphicon-glass
                 MyWines
             %li
-              %a{:href => "#"}
+              %a{:href => tastes_path}
                 %i.glyphicon.glyphicon-heart-empty
                 Tastes
             %li
@@ -90,15 +90,9 @@
                     %i.glyphicon.glyphicon-user
                   %ul.dropdown-menu
                     %li
-                      %a{:href => ""} More
+                      %a{:href => destroy_user_session_path } Sign Out
                     %li
-                      %a{:href => ""} More
-                    %li
-                      %a{:href => ""} More
-                    %li
-                      %a{:href => ""} More
-                    %li
-                      %a{:href => ""} More
+                      %a{:href => edit_user_registration_path} Edit Profile
           / /top nav
           .padding
             .full.col-sm-9
