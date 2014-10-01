@@ -1,10 +1,11 @@
 %h1 Wine Index
--form_tag wines_visible_path, method: :put do 
+=form_tag wines_visible_path, method: :put do 
   - @wines.each do |wine|
     = check_box_tag 'wines[wine_ids][]', wine.id 
     = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}"
     = link_to "Edit", edit_wine_path(wine), class: 'btn btn-xs btn-warning'
     = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
-    -submit_tag "Add to List"
-  %br
+    %br
+  =submit_tag "Add to List", class: 'btn btn-success btn-block'
+
   
