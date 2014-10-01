@@ -2,7 +2,7 @@ class WinesController < ApplicationController
   before_action :find_wine, only: [:show, :edit, :update, :destroy]
 
   def index
-    @wines = current_user.wines.all
+    @wines = Wine.all.where(user_id: current_user.id)
     @menus = Menu.all
     @tastes = Taste.all
   end
@@ -16,7 +16,7 @@ class WinesController < ApplicationController
 
   
   def create
-    @wine = Wine.create wine_params
+    @wine = Wine.create wine_params.merge(user_id: current_user.id)
     if @wine.save == true && current_user.user_type == "Sommelier/Restauranteur"
       redirect_to restaurant_dashboard_index_path
     elsif @wine.save == true && current_user.user_type == "Wino"

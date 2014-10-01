@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930145406) do
+ActiveRecord::Schema.define(version: 20141001150557) do
 
   create_table "menus", force: true do |t|
     t.string   "name"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20140930145406) do
     t.string   "menuable_type"
     t.integer  "menuable_id"
     t.string   "visible"
+    t.integer  "user_id"
   end
 
 end
