@@ -12,7 +12,7 @@ class MenusController < ApplicationController
   end
 
   def create
-    @menu = current_user.menus.create menu_params
+    @menu = current_user.menus.create menu_params.merge(user_type: current_user.user_type)
     if @menu.save == true && current_user.user_type == "Sommelier/Restauranteur"
       redirect_to restaurant_dashboard_index_path
     elsif @menu.save == true && current_user.user_type == "Wino"

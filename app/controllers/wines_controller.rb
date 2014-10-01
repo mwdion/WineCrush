@@ -47,6 +47,15 @@ class WinesController < ApplicationController
     end
   end  
 
+  def visible
+    # if wine_ids[].include? wine.id
+    #   Wine.update_all([visible:, "yes"], id: => params[wine_ids])
+    # else
+    #   Wine.update_all([visible:, "no"], id: => params[wine_ids])
+    # end
+    redirect_to wines_path
+  end
+
   private
   def wine_params
     params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id)

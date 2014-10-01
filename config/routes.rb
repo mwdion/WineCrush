@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get 'restaurant_dashboard/index' => 'restaurant_dashboard#index'
 
   get 'welcome/index'
-  get 'restaurant/index' => 'restaurant#index'
-  get 'restaurant/wines' => 'restaurant#wines'
+  get 'restaurants/index' => 'restaurants#index'
+  get 'restaurants/wines' => 'restaurants#wines'
+  put 'wines/visible' => 'wines#visible'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

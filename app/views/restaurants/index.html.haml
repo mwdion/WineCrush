@@ -1,0 +1,4 @@
+%h1 Restaurant Menus Index
+- @menus.each do |menu|
+  = link_to "#{menu.name}", menu_path(menu)
+  %br
