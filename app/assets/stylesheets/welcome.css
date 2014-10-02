@@ -11,6 +11,12 @@ body {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
+.navbar {
+background-color: #b30000;
+color: #ffffff;
+border: 0;
+border-radius: 0;
+}
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {

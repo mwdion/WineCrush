@@ -64,14 +64,10 @@
                 %span.icon-bar
                 %span.icon-bar
                 %span.icon-bar
-              %a.navbar-brand.logo{:href => "/"} b
+              %a.navbar-brand.logo{:href => root_path} W
             %nav.collapse.navbar-collapse{:role => "navigation"}
               %form.navbar-form.navbar-left
                 .input-group.input-group-sm{:style => "max-width:360px;"}
-                  %input#srch-term.form-control{:name => "srch-term", :placeholder => "Search", :type => "text"}
-                    .input-group-btn
-                      %button.btn.btn-default{:type => "submit"}
-                        %i.glyphicon.glyphicon-search
               %ul.nav.navbar-nav
                 %li
                   %a{:href => home_path}
@@ -82,8 +78,6 @@
                     %i.glyphicon.glyphicon-plus
                     Add Wine
                 %li
-                  %a{:href => "#"}
-                    %span.badge badge
               %ul.nav.navbar-nav.navbar-right
                 %li.dropdown
                   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}

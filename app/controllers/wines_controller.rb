@@ -48,7 +48,7 @@ class WinesController < ApplicationController
   end  
 
   def visible
-    if wine_ids[].include? wine.id
+    if params[:wines][:wine_ids].include?
       Wine.update_all({visible: true}, {id: params[:wines][:wine_ids]} )
     else
       Wine.update_all({visible: false}, {id: params[:wines][:wine_ids]} )
