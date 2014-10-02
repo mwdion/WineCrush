@@ -10,7 +10,7 @@
   = f.hidden_field :menuable_type, value: params[:menuable_type]
   = f.hidden_field :menuable_id, value: params[:menuable_id]
   / - @tastes.each do |taste|
-  /   = check_box_tag 'taste[taste_ids][]', taste.id, @wine.tastes.include?(taste) 
+  /   = check_box_tag 'taste[taste_ids][]', taste.id 
   /   = taste.flavor
   /   = taste.style
   = f.submit "Add Wine", class: 'btn btn-success btn-block'

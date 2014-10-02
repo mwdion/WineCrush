@@ -12,6 +12,7 @@ class WinesController < ApplicationController
 
   def new
     @wine = Wine.new
+    @taste = Taste.new
   end
 
   

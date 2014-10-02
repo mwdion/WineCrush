@@ -2,9 +2,11 @@ class MenusController < ApplicationController
   before_action :find_menu, only: [:show, :edit, :update, :destroy]  
   def index
     @menus = current_user.menus
+    @tastes = Tastes.all
   end
 
   def show
+    @menu.wines = Wine.all.where(user_id: current_user.id, visible: "true")  
   end
 
   def new
