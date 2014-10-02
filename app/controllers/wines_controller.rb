@@ -1,10 +1,10 @@
 class WinesController < ApplicationController
   before_action :find_wine, only: [:show, :edit, :update, :destroy]
+  before_action :find_tastes, only:[:index, :new, :edit]
 
   def index
     @wines = Wine.all.where(user_id: current_user.id)
     @menus = Menu.all
-    @tastes = Taste.all
   end
 
   def show
@@ -12,7 +12,6 @@ class WinesController < ApplicationController
 
   def new
     @wine = Wine.new
-    @taste = Taste.new
   end
 
   
@@ -65,6 +64,10 @@ class WinesController < ApplicationController
   private
   def wine_params
     params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id)
+  end
+
+  def find_tastes
+    @tastes = Taste.all
   end
 
   def find_menu
