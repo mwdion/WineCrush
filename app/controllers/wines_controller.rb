@@ -50,11 +50,11 @@ class WinesController < ApplicationController
   def visible
     @wines = Wine.all.where(user_id: current_user.id)
     @wines.each do |wine|
-      if params[:wines][:wine_ids].include?(wine.id)
-        wine.visible = true
+      if params[:wines][:wine_ids].include?(wine.id.to_s)
+        wine.visible = "true"
         wine.save
       else
-        wine.visible = false
+        wine.visible = "false"
         wine.save
       end
     end
