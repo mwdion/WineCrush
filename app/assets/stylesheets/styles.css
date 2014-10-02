@@ -89,7 +89,7 @@ hr {
 .navbar-blue .dropdown-menu li > a {padding-left:30px;}
 
 .navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
-   background-color:#2A4888;
+   background-color:#A52A2A;
    color:#fff;
 }
 
@@ -121,20 +121,20 @@ hr {
 
 .logo {
   display:block;
-  padding:3px;
+  padding:2px;
   background-color:#fff;
-  color:#3B5999;
-  height:28px;
+  color:#B20000;
+  height:26px;
   width:28px;
-  margin:9px;
+  margin:14px;
   margin-right:2px;
   margin-left:15px;
-  font-size:20px;
-  font-weight:700;
+  font-size:15px;
+  font-weight:500;
   text-align:center;
   text-decoration:none;
-  text-shadow:0 0 1px;
-  border-radius:2px;
+  text-shadow:0 0 0px;
+  border-radius:5px;
 }
 #sidebar-footer {
   background-color:#444;

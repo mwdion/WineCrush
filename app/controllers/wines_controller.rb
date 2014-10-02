@@ -48,10 +48,15 @@ class WinesController < ApplicationController
   end  
 
   def visible
-    if params[:wines][:wine_ids].include?
-      Wine.update_all({visible: true}, {id: params[:wines][:wine_ids]} )
-    else
-      Wine.update_all({visible: false}, {id: params[:wines][:wine_ids]} )
+    @wines = Wine.all.where(user_id: current_user.id)
+    @wines.each do |wine|
+      if params[:wines][:wine_ids].include?(wine.id)
+        wine.visible = true
+        wine.save
+      else
+        wine.visible = false
+        wine.save
+      end
     end
     redirect_to wines_path
   end
