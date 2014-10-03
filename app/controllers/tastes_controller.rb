@@ -2,6 +2,7 @@ class TastesController < ApplicationController
   before_action :find_taste, only: [:show, :edit, :update, :destroy]  
   def index
     @tastes = Taste.all
+    @user = current_user
   end
 
   def show
@@ -9,6 +10,7 @@ class TastesController < ApplicationController
 
   def new
     @taste = Taste.new
+    @user = current_user
   end
 
   def create
@@ -39,6 +41,6 @@ class TastesController < ApplicationController
   end
 
   def taste_params
-    params.require(:taste).permit(:flavor, :style)
+    params.require(:taste).permit(:flavor, :style, :wine_id, :user_id)
   end
 end

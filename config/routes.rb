@@ -8,12 +8,14 @@ Rails.application.routes.draw do
   get 'restaurants/index' => 'restaurants#index'
   get 'restaurants/wines' => 'restaurants#wines'
   put 'wines/visible' => 'wines#visible'
+  # put 'tastes/saved' => 'tastes#saved'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  resources :users
   resources :tastes  
   resources :menus 
   resources :wines 

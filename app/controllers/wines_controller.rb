@@ -63,7 +63,7 @@ class WinesController < ApplicationController
 
   private
   def wine_params
-    params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id)
+    params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id, taste_ids:[])
   end
 
   def find_tastes

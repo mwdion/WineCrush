@@ -1,9 +1,10 @@
 %h1
 Tastes
 %br
-- @tastes.each do |taste|
-  = link_to "#{taste.flavor}", taste_path(taste)
-  = link_to "Edit", edit_taste_path(taste), class: 'btn btn-xs btn-warning'
-  = link_to "Delete", taste_path(taste), method: :delete, class: 'btn btn-xs btn-danger'
-  %br 
-= link_to "New Taste", new_taste_path, class: 'btn btn-info btn-block'
+= form_for @user do |f|
+  - @tastes.all.each do |taste|
+    = check_box_tag 'user[taste_ids][]', taste.id, false, {id: 'taste_taste_id_#{taste.id}', class: "taste_checkbox", taste_id: taste.id} 
+    = taste.flavor
+    = taste.style
+  %br
+= f.submit "Add Tastes", class: 'btn btn-success btn-block'
