@@ -34,8 +34,7 @@ gem 'cancan'
 gem "paperclip", "~> 4.2"
 gem "font-awesome-rails"
 gem 'bootstrap-glyphicons'
-
-
+gem 'carrierwave'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

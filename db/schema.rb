@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004152816) do
+ActiveRecord::Schema.define(version: 20141004194445) do
 
   create_table "comments", force: true do |t|
     t.text     "content"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20141004152816) do
     t.integer  "menuable_id"
     t.string   "visible"
     t.integer  "user_id"
+    t.string   "image"
   end
 
 end
