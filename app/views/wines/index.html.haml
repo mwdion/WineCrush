@@ -8,6 +8,8 @@
     = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
     %br
   =submit_tag "Add to List", class: 'btn btn-success btn-block'
-  = hidden_field_tag 'model_name[column_name]', '0'
+
+= text_field_tag '', '', class: "wine_search form-control focusedInput", placeholder: 'Search...'
+= link_to "Search Wines", 'javascript:void(0);', class: "search_wines btn btn btn-primary btn-block"
 
   

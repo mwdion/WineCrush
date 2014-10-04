@@ -1,0 +1,4 @@
+$("ul.search_list").html("")
+<% @wine.each do |wine| %>
+  $("ul.search_list").append("<%= escape_javascript(render('wines/wine_partial', wine: wine)) %>")
+<% end %>

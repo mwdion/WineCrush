@@ -73,6 +73,13 @@ class WinesController < ApplicationController
     redirect_to wine_path(@wine)
   end
 
+  def search_wine
+    @wine = Wine.where("grape LIKE ?", "%#{params[:q]}%")
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
   def wine_params
     params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id, taste_ids:[])
