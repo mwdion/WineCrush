@@ -2,8 +2,8 @@
 Tastes
 %br
 = form_for @user do |f|
-  - @tastes.all.each do |taste|
-    = check_box_tag 'user[taste_ids][]', taste.id, false, {id: 'taste_taste_id_#{taste.id}', class: "taste_checkbox", taste_id: taste.id} 
+  - @tastes.each do |taste|
+    = check_box_tag 'user[taste_ids][]', taste.id, @user.tastes.include?(taste) 
     = taste.flavor
     = taste.style
   %br
