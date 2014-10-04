@@ -17,8 +17,13 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :users
   resources :tastes  
-  resources :menus 
-  resources :wines 
+  resources :menus
+  resources :wines do
+    member do
+      post :create_comment
+      delete :delete_comment
+    end
+  end
   
 
   # Example of regular route:

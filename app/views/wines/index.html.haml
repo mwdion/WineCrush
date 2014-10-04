@@ -3,7 +3,7 @@
   - @wines.each do |wine|
     = check_box_tag 'wines[wine_ids][]', wine.id, wine.visible == "true"
     / = hidden_field_tag 'wines[visible]', 'false'
-    = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}"
+    = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}", wine_path(wine)
     = link_to "Edit", edit_wine_path(wine), class: 'btn btn-xs btn-warning'
     = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
     %br

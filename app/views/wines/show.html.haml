@@ -1,7 +1,32 @@
-%h1 Wine Index
+%h1 Wine 
 %br
--@wines.each do |wine|
-  = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}"
-  = link_to "Edit", edit_wine_path(wine), class: 'btn btn-xs btn-warning'
-  = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
+= @wine.vintage
 %br
+= @wine.country
+%br
+= @wine.region
+%br
+= @wine.purveyor
+%br
+= @wine.grape
+%br
+= @wine.style
+%br
+= @wine.btg
+%br
+= @wine.btb
+%br 
+%br
+-@wine.comments.each do |comment|
+  -if comment.content
+    = comment.email
+    %br
+    = comment.content
+    = link_to "Delete", delete_comment_wine_path(@wine, comment_id: comment.id), method: :delete
+    %br
+    %br
+%br
+= form_for [@comment, @wine], url: create_comment_wine_path(@wine) do |f|
+  = f.text_area :content, class: 'form-control focusedInput', placeholder: 'Add Comment Here...'
+  %br
+  = f.submit

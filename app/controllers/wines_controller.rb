@@ -1,6 +1,8 @@
 class WinesController < ApplicationController
-  before_action :find_wine, only: [:show, :edit, :update, :destroy]
+  before_action :find_wine, only: [:show, :edit, :update, :destroy, :create_comment, :delete_comment]
   before_action :find_tastes, only:[:index, :new, :edit]
+  before_action :find_comment, only: [:delete_comment] 
+
 
   def index
     @wines = Wine.all.where(user_id: current_user.id)
@@ -61,9 +63,27 @@ class WinesController < ApplicationController
     redirect_to wines_path
   end
 
+  def create_comment
+    @comment = @wine.comments.create comment_params.merge(user_id: current_user.id, email: current_user.email)
+    redirect_to wine_path(@wine)
+  end
+
+  def delete_comment
+    @comment.delete
+    redirect_to wine_path(@wine)
+  end
+
   private
   def wine_params
     params.require(:wine).permit(:vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id, taste_ids:[])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content, :commentable_type, :commentable_id, :email)
+  end
+
+  def find_comment
+    @comment = @wine.comments.find params[:comment_id]
   end
 
   def find_tastes
