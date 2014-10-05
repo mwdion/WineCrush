@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'restaurants/index' => 'restaurants#index'
   get 'restaurants/wines' => 'restaurants#wines'
   put 'wines/visible' => 'wines#visible'
-  # get '/wines' => 'wines#search_wines' 
+  get '/wines_search' => 'wines#search_wines' 
 
   # put 'tastes/saved' => 'tastes#saved'
 

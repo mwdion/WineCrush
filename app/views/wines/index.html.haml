@@ -1,4 +1,5 @@
 %h1 Wine Index
+%br
 =form_tag wines_visible_path, method: :put do 
   - @wines.each do |wine|
     = check_box_tag 'wines[wine_ids][]', wine.id, wine.visible == "true"
@@ -11,5 +12,5 @@
 
 = text_field_tag '', '', class: "wine_search form-control focusedInput", placeholder: 'Search...'
 = link_to "Search Wines", 'javascript:void(0);', class: "search_wines btn btn btn-primary btn-block"
-
+%ul.search_list
   
