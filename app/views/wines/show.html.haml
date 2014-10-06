@@ -28,7 +28,7 @@
     %br
     %br
 %br
-= form_for [@comment, @wine], url: create_comment_wine_path(@wine) do |f|
-  / = f.text_area :content, class: 'form-control focusedInput', placeholder: 'Add Comment Here...'
-  / %br
+= form_for [@wine, @comment], url: create_comment_wine_path(@wine) do |f|
+  = f.text_area :content, class: 'form-control focusedInput', placeholder: 'Add Comment Here...'
+  %br
   = f.submit

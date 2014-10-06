@@ -1,10 +1,9 @@
-%h1
-Tastes
+%h1 Tastes
 %br
 = form_for @user do |f|
   - @tastes.each do |taste|
     = check_box_tag 'user[taste_ids][]', taste.id, @user.tastes.include?(taste) 
     = taste.flavor
     = taste.style
-  %br
+    %br
   = f.submit "Add Tastes", class: 'btn btn-success btn-block'

@@ -10,6 +10,7 @@ class WinesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
   end
 
   def new
@@ -74,11 +75,18 @@ class WinesController < ApplicationController
   end
 
   def search_wines
-    @wine = Wine.where("grape LIKE ?", "%#{params[:q]}%")
+    @wine = Wine.where("grape LIKE ? OR country LIKE ? OR vintage LIKE ? OR region LIKE ? OR purveyor LIKE ? OR style LIKE ? OR btg LIKE ? OR btb LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%","%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%")
     respond_to do |format|
       format.js
     end
   end
+
+  # def recommendations
+  #   @tastes = current_user.tastes.all.each do |taste|
+  #     @wines =  tastes.wines.all.each do |wines|
+  #     end
+  #   end  
+  # end
 
   private
   def wine_params

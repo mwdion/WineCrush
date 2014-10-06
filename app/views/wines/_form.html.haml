@@ -14,6 +14,7 @@
     = check_box_tag 'wine[taste_ids][]', taste.id, @wine.tastes.include?(taste) 
     = taste.flavor
     = taste.style
+    %br
   = f.submit "Add Wine", class: 'btn btn-success btn-block'
 
 
