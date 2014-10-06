@@ -83,7 +83,14 @@ class WinesController < ApplicationController
 
   # def recommendations
   #   @tastes = current_user.tastes.all.each do |taste|
-  #     @wines =  tastes.wines.all.each do |wines|
+  #     @wines =  tastes.wines.all.each do |wine|
+  #       p "*"*200
+  #     #   p wine
+  #     #   @recommendations = Array.new
+  #     #   @recommendations.push(wine)
+
+  #       #display wine where current_users taste.id == to wines taste.id
+
   #     end
   #   end  
   # end
