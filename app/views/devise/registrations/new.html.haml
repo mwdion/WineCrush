@@ -1,28 +1,73 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  %div
-    = f.label :password
-    - if @validatable
-      %i
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  %div
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  %div
-    = f.label :user_type, "Sommelier/Restauranteur"
-    %br/
-    = f.radio_button :user_type, "Sommelier/Restauranteur"
-  %div
-    = f.label :user_type, "Wino"
-    %br/
-    = f.radio_button :user_type, "Wino"
-  %div= f.submit "Sign up"
-= render "devise/shared/links"
+/ %h2 Sign up
+/ = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+/   = devise_error_messages!
+/   %div
+/     = f.label :email
+/     %br/
+/     = f.email_field :email, autofocus: true
+/   %div
+/     = f.label :password
+/     - if @validatable
+/       %i
+/         (#{@minimum_password_length} characters minimum)
+/     %br/
+/     = f.password_field :password, autocomplete: "off"
+/   %div
+/     = f.label :password_confirmation
+/     %br/
+/     = f.password_field :password_confirmation, autocomplete: "off"
+/   %div
+/     = f.label :user_type, "Sommelier/Restauranteur"
+/     %br/
+/     = f.radio_button :user_type, "Sommelier/Restauranteur"
+/   %div
+/     = f.label :user_type, "Wino"
+/     %br/
+/     = f.radio_button :user_type, "Wino"
+/   %div= f.submit "Sign up"
+/ = render "devise/shared/links"
+
+
+.sessions.text-center
+  .well
+
+    %p.lead
+      Sign up with
+      %br/
+      %b WineCrush
+
+    = form_for resource, as: resource_name, url: registration_path( resource_name ), html: { role: :form } do |f|
+      = devise_error_messages!
+
+      .form-group
+        = f.email_field :email, required: true, autofocus: true, placeholder: 'Email address', class: 'form-control'
+
+      .form-group
+        = f.password_field :password, required: true, placeholder: 'Password', class: 'form-control', autocomplete: "off"
+        - if @validatable
+          %p.help-block
+            %i
+              = @minimum_password_length
+              characters minimum
+
+      .form-group
+        = f.password_field :password_confirmation, required: true, placeholder: 'Password confirmation', class: 'form-control', autocomplete: "off"
+
+      .form-group
+        .radiobutton
+          %label
+            = f.label :user_type, "Sommelier/Restauranteur"
+            %br
+            = f.radio_button :user_type, "Sommelier/Restauranteur"
+
+      .form-group
+        .radiobutton
+          %label
+            = f.label :user_type, "Wino"
+            %br/
+            = f.radio_button :user_type, "Wino"
+
+      .actions
+        = f.submit "Sign up", class: 'btn btn-success'
+  %br/
+  %p= render "devise/shared/links"

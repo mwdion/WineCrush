@@ -5,7 +5,8 @@
   = f.text_field :region, class: 'form-control focusedInput', placeholder: 'Add wine region here...'
   = f.text_field :purveyor, class: 'form-control focusedInput', placeholder: 'Add purveyor here...'
   = f.text_field :grape, class: 'form-control focusedInput', placeholder: 'Add grape type here...'
-  = f.text_field :style, class: 'form-control focusedInput', placeholder: 'Add style of wine here...'
+  = f.select :style, options_for_select(["Select One",'White', 'Red', 'Sparkling'] ), {}, { class: 'form-control form-control' }
+  / = f.text_field :style, class: 'form-control focusedInput', placeholder: 'Add style of wine here...'
   = f.text_field :btg, class: 'form-control focusedInput', placeholder: 'Add by the glass price here...'
   = f.text_field :btb, class: 'form-control focusedInput', placeholder: 'Add by the bottle price here...'
   = f.hidden_field :menuable_type, value: params[:menuable_type]

@@ -7,6 +7,7 @@ class WinesController < ApplicationController
   def index
     @wines = Wine.all.where(user_id: current_user.id)
     @menus = Menu.all
+    @tastes = Taste.all
   end
 
   def show
@@ -81,19 +82,15 @@ class WinesController < ApplicationController
     end
   end
 
-  # def recommendations
-  #   @tastes = current_user.tastes.all.each do |taste|
-  #     @wines =  tastes.wines.all.each do |wine|
-  #       p "*"*200
-  #     #   p wine
-  #     #   @recommendations = Array.new
-  #     #   @recommendations.push(wine)
-
-  #       #display wine where current_users taste.id == to wines taste.id
-
-  #     end
-  #   end  
-  # end
+  def recommendations
+    @recommendations = []
+    current_user.tastes.each do |taste|
+      taste.wines.each do |wine|
+        @recommendations << wine if taste == wine.taste
+        return @recommendations
+     end
+   end  
+ end
 
   private
   def wine_params
