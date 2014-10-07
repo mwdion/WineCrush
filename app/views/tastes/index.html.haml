@@ -7,3 +7,8 @@
     = taste.style
     %br
   = f.submit "Add Tastes", class: 'btn btn-success btn-block'
+
+/ - white_tastes.each do |taste|
+/     = check_box_tag 'wine[taste_ids][]', taste.id, @wine.tastes.include?(taste) 
+/     = taste.flavor
+/     = taste.style
