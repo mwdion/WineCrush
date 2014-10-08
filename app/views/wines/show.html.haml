@@ -1,6 +1,5 @@
 %h1 Wine
 %br
-%img.img-rounded{:src => "@wine.image_url.to_s"}
 = image_tag @wine.image_url.to_s
 %br
 = @wine.vintage
@@ -25,11 +24,12 @@
     = comment.email
     %br
     = comment.content
-    = link_to "Delete", delete_comment_wine_path(@wine, comment_id: comment.id), method: :delete
+    = link_to "Delete", delete_comment_wine_path(@wine, comment_id: comment.id), method: :delete, class: 'btn btn-xs btn-danger'
     %br
     %br
 %br
 = form_for [@wine, @comment], url: create_comment_wine_path(@wine) do |f|
   = f.text_area :content, class: 'form-control focusedInput', placeholder: 'Add Comment Here...'
   %br
-  = f.submit
+  = f.submit class: 'btn btn-success'
+/

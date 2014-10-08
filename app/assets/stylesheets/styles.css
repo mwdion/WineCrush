@@ -13,7 +13,23 @@ html, body {
 a {
   color:white;
 }
+a.btn.btn-xs.btn-warning{
+  background-color: #deba66;
+    color: white;
+    border: none;
+}
+a.btn.btn-xs.btn-danger{
+  background-color: #b53223;
+    color: white;
+    border: none;
 
+}
+select.form-control{
+  width: 40%;
+}
+input.form-control.focusedInput{
+  width: 40%;
+}
 
 nav.navbar.navbar-static {
 margin-bottom: 0px;
@@ -26,13 +42,27 @@ a:hover {
 h1{
   color: #b3bdbe;
 }
+a.btn.btn-success{
+background-color: #520e1d;
+  color: white;
+  border: none;
+  width: 25%;
+
+}
 input.btn.btn-success{
   background-color: #520e1d;
   color: white;
   border: none;
+  width: 30%;
 }
 input.btn.btn-success:hover {
   background-color: grey;
+}
+a.search_wines.btn.btn-primary{
+    background-color: grey;
+    background-color: #520e1d;
+    color: white;
+    border: none;
 }
 
 #main.column.col-sm-10.col-xs-11 {
@@ -171,6 +201,9 @@ hr.featurette-divider{
 }
 #footer {
   margin-bottom:20px;
+}
+input.wine_search.form-control.input.focusedInput{
+  width: 35%;
 }
 
 /* bootstrap overrides */

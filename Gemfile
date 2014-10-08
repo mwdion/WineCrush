@@ -35,6 +35,7 @@ gem "paperclip", "~> 4.2"
 gem "font-awesome-rails"
 gem 'bootstrap-glyphicons'
 gem 'carrierwave'
+gem 'rmagick', '2.13.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

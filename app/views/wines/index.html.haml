@@ -1,4 +1,8 @@
 %h1 Wine Index
+= text_field_tag '', '', class: "wine_search form-control input focusedInput", placeholder: 'Search...'
+%br
+= link_to "Search Wines", 'javascript:void(0);', class: "search_wines btn btn btn-primary"
+%br
 %br
 =form_tag wines_visible_path, method: :put do 
   - @wines.each do |wine|
@@ -8,10 +12,9 @@
     = link_to "Edit", edit_wine_path(wine), class: 'btn btn-xs btn-warning'
     = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
     %br
-  =submit_tag "Add to List", class: 'btn btn-success btn-block'
+  =submit_tag "Add to List", class: 'btn btn-success'
 
-= text_field_tag '', '', class: "wine_search form-control input focusedInput", placeholder: 'Search...'
-= link_to "Search Wines", 'javascript:void(0);', class: "search_wines btn btn btn-primary btn-block"
+
 %ul.search_list
   
 
