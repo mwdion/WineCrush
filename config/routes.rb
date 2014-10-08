@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'restaurants/index' => 'restaurants#index'
   get 'restaurants/wines' => 'restaurants#wines'
+  get 'restaurants/:menu_id/show' => 'restaurants#show', as: :restaurant_menu_show
   put 'wines/visible' => 'wines#visible'
   get '/wines_search' => 'wines#search_wines' 
   get 'wines/recommendations' => 'wines#recommendations'

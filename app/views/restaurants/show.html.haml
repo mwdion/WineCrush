@@ -1,10 +1,9 @@
-%h1 My Wines
+%h1 Restaurant Wines
 = @menu.name
 %br
-- @menu.wines.each do |wine|
+=@wines.inspect
+- @wines.each do |wine|
   = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}", wine_path(wine)
-  / = link_to "Edit", edit_wine_path(wine), class: 'btn btn-xs btn-warning'
-  / = link_to "Delete", wine_path(wine), method: :delete, class: 'btn btn-xs btn-danger'
   %br
 %br
 %br

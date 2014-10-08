@@ -13,6 +13,13 @@ html, body {
 a {
   color:white;
 }
+a.btn.btn-info{
+  background-color: #520e1d;
+  color: white;
+  border: none;
+  width: 30%;
+
+}
 a.btn.btn-xs.btn-warning{
   background-color: #deba66;
     color: white;
