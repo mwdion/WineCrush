@@ -42,8 +42,8 @@
           / tiny only nav
           %ul#xs-menu.nav.visible-xs
             %li
-              %a.text-center{:href => "#featured"}
-                %i.glyphicon.glyphicon-list-alt
+              %a.text-center{:href => "#{}features"}
+                %i.glyphicon.glyphicon-glyphicon-cutlery
             %li
               %a.text-center{:href => "#stories"}
                 %i.glyphicon.glyphicon-list
@@ -70,11 +70,11 @@
                 .input-group.input-group-sm{:style => "max-width:360px;"}
               %ul.nav.navbar-nav
                 %li
-                  %a{:href => home_path}
+                  %a.dash{:href => home_path}
                     %i.glyphicon.glyphicon-home
                     Home
                 %li
-                  %a{:href => new_wine_path(@users, menuable_type: "User", menuable_id: current_user.id), :role => "button"}
+                  %a.dash{:href => new_wine_path(@users, menuable_type: "User", menuable_id: current_user.id), :role => "button"}
                     %i.glyphicon.glyphicon-plus
                     Add Wine
                 %li
@@ -84,9 +84,9 @@
                     %i.glyphicon.glyphicon-user
                   %ul.dropdown-menu
                     %li
-                      %a{:href => destroy_user_session_path } Sign Out
+                      %a.dash{:href => destroy_user_session_path } Sign Out
                     %li
-                      %a{:href => edit_user_registration_path} Edit Profile
+                      %a.dash{:href => edit_user_registration_path} Edit Profile
           / /top nav
           .padding
             .full.col-sm-9

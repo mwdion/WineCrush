@@ -11,17 +11,44 @@ html, body {
 }
 
 a {
-  color:#222222;
+  color:white;
+}
+
+
+nav.navbar.navbar-static {
+margin-bottom: 0px;
 }
 
 a:hover {
   text-decoration:none;
+
+}
+h1{
+  color: #b3bdbe;
+}
+input.btn.btn-success{
+  background-color: #520e1d;
+  color: white;
+  border: none;
+}
+input.btn.btn-success:hover {
+  background-color: grey;
 }
 
+#main.column.col-sm-10.col-xs-11 {
+  background-image: url("/assets/redwinewood.jpg");
+}
 hr {
   border-color:#dedede;
 }
 
+h1.welcome {
+  margin-bottom: 26%;
+}
+
+hr.featurette-divider{
+  margin: 0px;
+}
 .wrapper, .row {
    height: 100%;
    margin-left:0;
@@ -89,8 +116,8 @@ hr {
 .navbar-blue .dropdown-menu li > a {padding-left:30px;}
 
 .navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
-   background-color:#A52A2A;
-   color:#fff;
+   background-color: white;
+   color: grey;
 }
 
 #main {
@@ -171,7 +198,10 @@ h1,h2,h3 {
 .form-control {
   
 }
+li.dropdown{
+  padding-right: 50%;
 
+}
 .panel textarea, .well textarea, textarea.form-control
 {
    resize: none;

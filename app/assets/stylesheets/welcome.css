@@ -12,8 +12,8 @@ body {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 .navbar {
-background-color: #b30000;
-color: #ffffff;
+background-color: #520e1d;
+color: white;
 border: 0;
 border-radius: 0;
 }
@@ -47,7 +47,7 @@ border-radius: 0;
 /* Carousel base class */
 .carousel {
   height: 500px;
-  margin-bottom: 60px;
+  margin-bottom: 8%;*/
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
