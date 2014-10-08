@@ -1,3 +1,3 @@
-- @recommendations.each do |wine|
+- @recommendations.uniq.each do |wine|
   = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}", wine_path(wine)
   %br

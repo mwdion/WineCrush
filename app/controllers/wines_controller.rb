@@ -86,7 +86,7 @@ class WinesController < ApplicationController
     @recommendations = []
     current_user.tastes.each do |taste|
       taste.wines.each do |wine|
-        @recommendations << wine if wine.tastes.include?(taste) 
+        @recommendations << wine if wine.tastes.include?(taste)
      end
    end
  end
