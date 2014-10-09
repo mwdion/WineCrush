@@ -38,6 +38,8 @@ gem 'rmagick', '2.13.2'
 group :production do
   gem 'pg'
 end
+gem "paperclip-dropbox", ">= 1.1.7"
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
