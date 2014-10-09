@@ -34,7 +34,8 @@ gem 'cancan'
 gem "font-awesome-rails"
 gem 'bootstrap-glyphicons'
 gem "paperclip", "~> 4.2"
-gem 'pg'
+gem 'rmagick', '2.13.2'
+gem 'pg', group: :production
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'figaro'
 gem 'rails_12factor', group: :production
