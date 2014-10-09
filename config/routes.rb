@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'restaurants/:menu_id/show' => 'restaurants#show', as: :restaurant_menu_show
   put 'wines/visible' => 'wines#visible'
   get '/wines_search' => 'wines#search_wines' 
-  get 'wines/recommendations' => 'wines#recommendations'
+  get 'wines/:menu_id/recommendations' => 'wines#recommendations', as: :wines_recommendations
 
   # put 'tastes/saved' => 'tastes#saved'
 

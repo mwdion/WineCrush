@@ -83,10 +83,13 @@ class WinesController < ApplicationController
   end
 
   def recommendations
+    @menu = Menu.find params[:menu_id]
+    @menu_wines = @menu.wines
+    @user_tastes = current_user.tastes
     @recommendations = []
-    current_user.tastes.each do |taste|
-      taste.wines.each do |wine|
-        @recommendations << wine if wine.tastes.include?(taste)
+      @user_tastes.each do |taste|
+        @menu_wines.each do |flavor|
+          @recommendations << flavor if flavor.tastes.include?(taste)
      end
    end
  end

@@ -1,29 +1,27 @@
 %h1 Wine
 %br
-= image_tag @wine.image_url.to_s
+%p2= image_tag @wine.image_url.to_s
 %br
-= @wine.vintage
+%p2= @wine.vintage
+%p2= @wine.country
+%p2= @wine.region
 %br
-= @wine.country
+%p2= @wine.purveyor
 %br
-= @wine.region
+%p2= @wine.grape
 %br
-= @wine.purveyor
+%p2= @wine.style
 %br
-= @wine.grape
+%p2= @wine.btg
 %br
-= @wine.style
-%br
-= @wine.btg
-%br
-= @wine.btb
+%p2= @wine.btb
 %br 
 %br
 -@wine.comments.each do |comment|
   -if comment.content
-    = comment.email
+    %p3= comment.email
     %br
-    = comment.content
+    %p3= comment.content
     = link_to "Delete", delete_comment_wine_path(@wine, comment_id: comment.id), method: :delete, class: 'btn btn-xs btn-danger'
     %br
     %br

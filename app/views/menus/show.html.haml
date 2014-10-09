@@ -1,5 +1,4 @@
-%h1 My Wines
-= @menu.name
+%p1= @menu.name
 %br
 - @menu.wines.each do |wine|
   = link_to "#{wine.vintage} #{wine.country} #{wine.region} #{wine.purveyor} #{wine.grape} #{wine.style} #{wine.btg} #{wine.btb}", wine_path(wine)
@@ -8,5 +7,5 @@
   %br
 %br
 %br
-= link_to "Recommendations", wines_recommendations_path, class: 'btn btn-success'
+/ = link_to "Recommendations", wines_recommendations_path, class: 'btn btn-success'
 

@@ -9,6 +9,25 @@ html, body {
    font-family:Arial,sans-serif;
    font-size:13px;
 }
+p1{
+  color: white;
+  font-size: 42px;
+}
+p2{
+  color: white;
+  font-size: 25px;
+
+}
+p3{
+  color: white;
+  font-size: 14px;
+  font-family: helvetica;
+  font-weight: bolder;
+}
+
+textarea#comment_content.form-control.focusedInput{
+  width: 40%;
+}
 
 a {
   color:white;
@@ -56,6 +75,10 @@ background-color: #520e1d;
   width: 25%;
 
 }
+a.btn.btn-success:hover{
+  background-color: grey;
+
+}
 input.btn.btn-success{
   background-color: #520e1d;
   color: white;
@@ -64,6 +87,11 @@ input.btn.btn-success{
 }
 input.btn.btn-success:hover {
   background-color: grey;
+}
+
+a.search_wines.btn.btn-primary:hover{
+    background-color: grey;
+
 }
 a.search_wines.btn.btn-primary{
     background-color: grey;
@@ -80,7 +108,9 @@ hr {
 }
 
 h1.welcome {
-  margin-bottom: 26%;
+  margin-bottom: 40%;
+  color: white;
+
 }
 
 hr.featurette-divider{

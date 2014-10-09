@@ -1,17 +1,15 @@
 %br
 %br
-= wine.vintage
+%p3= link_to "#{wine.vintage}", wine_path(wine)
+%p3= link_to "#{wine.country}", wine_path(wine)
+%p3= link_to "#{wine.region}", wine_path(wine)
 %br
-= wine.country
+%p3= link_to "#{wine.purveyor}", wine_path(wine)
 %br
-= wine.region
+%p3= link_to "#{wine.grape}", wine_path(wine)
 %br
-= wine.purveyor
+%p3= link_to "#{wine.style}", wine_path(wine)
 %br
-= wine.grape
+%p3= link_to "#{wine.btg}", wine_path(wine)
 %br
-= wine.style
-%br
-= wine.btg
-%br
-= wine.btb
+%p3= link_to "#{wine.btb}", wine_path(wine)
