@@ -31,11 +31,13 @@ gem 'quiet_assets'
 gem 'haml-rails'
 gem 'html2haml'
 gem 'cancan'
-gem "paperclip", "~> 4.2"
 gem "font-awesome-rails"
 gem 'bootstrap-glyphicons'
 gem "paperclip", "~> 4.2"
 gem 'rmagick', '2.13.2'
+group :production do
+  gem 'pg'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
