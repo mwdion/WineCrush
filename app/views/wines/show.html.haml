@@ -1,6 +1,6 @@
 %h1 Wine
 %br
-%p2= image_tag @wine.image_url.to_s
+%p2= image_tag @wine.avatar.url(:medium)
 %br
 %p2= @wine.vintage
 %p2= @wine.country

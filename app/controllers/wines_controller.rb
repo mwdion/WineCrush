@@ -96,7 +96,7 @@ class WinesController < ApplicationController
 
   private
   def wine_params
-    params.require(:wine).permit(:image, :vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id, taste_ids:[])
+    params.require(:wine).permit(:avatar, :vintage, :country, :region, :purveyor, :grape, :style, :btg, :btb, :menuable_type, :menuable_id, taste_ids:[])
   end
 
   def comment_params

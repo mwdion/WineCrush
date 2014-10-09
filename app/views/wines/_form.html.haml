@@ -1,5 +1,5 @@
 = form_for [@menu, @wine], :html => { :multipart => true }  do |f|
-  = f.file_field :image
+  = f.file_field :avatar
   %br
   = f.text_field :vintage, class: 'form-control focusedInput', placeholder: 'Add wine vintage here...'
   %br
@@ -22,8 +22,8 @@
   = f.hidden_field :menuable_id, value: params[:menuable_id]
   - @tastes.all.each do |taste|
     = check_box_tag 'wine[taste_ids][]', taste.id, @wine.tastes.include?(taste) 
-    = taste.flavor
-    = taste.style
+    %p3= taste.flavor
+    %p3= taste.style
     %br
   = f.submit "Add Wine", class: 'btn btn-success'
 
